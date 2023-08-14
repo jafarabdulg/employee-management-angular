@@ -8,6 +8,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import {RouterLink} from "@angular/router";
 import { EmployeeListComponent } from './component/employee-list/employee-list.component';
 import { PagingNavComponent } from './shared/paging-nav/paging-nav.component';
+import {EmployeeService} from "./service/employee.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { PagingNavComponent } from './shared/paging-nav/paging-nav.component';
     NgOptimizedImage,
     RouterLink
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

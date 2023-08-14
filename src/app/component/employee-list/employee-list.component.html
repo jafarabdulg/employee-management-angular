@@ -21,17 +21,17 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>15_jafar</td>
-      <td>Jafar</td>
-      <td>Abdul Ghoffar</td>
-      <td class="text-center">jafarabdulg@gmail.com</td>
-      <td class="text-center">07-17-1999</td>
-      <td class="text-center">20.000.000,00</td>
-      <td class="text-center">Active</td>
-      <td class="text-center">Developer</td>
-      <td class="text-center">07-17-2030</td>
+    <tr *ngFor="let employee of employees; let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{employee.username}}</td>
+      <td>{{employee.firstName}}</td>
+      <td>{{employee.lastName}}</td>
+      <td class="text-center">{{employee.email}}</td>
+      <td class="text-center">{{employee.birthDate}}</td>
+      <td class="text-center">{{employee.basicSalary}}</td>
+      <td class="text-center">{{employee.status}}</td>
+      <td class="text-center">{{employee.group}}</td>
+      <td class="text-center">{{employee.description}}</td>
     </tr>
     </tbody>
   </table>
