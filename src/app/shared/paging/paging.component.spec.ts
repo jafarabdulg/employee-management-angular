@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PagingNavComponent } from './paging-nav.component';
+import { PagingComponent } from './paging.component';
 
 describe('PagingNavComponent', () => {
-  let component: PagingNavComponent;
-  let fixture: ComponentFixture<PagingNavComponent>;
+  let component: PagingComponent;
+  let fixture: ComponentFixture<PagingComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PagingNavComponent]
+      declarations: [PagingComponent]
     });
-    fixture = TestBed.createComponent(PagingNavComponent);
+    fixture = TestBed.createComponent(PagingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

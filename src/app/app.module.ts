@@ -7,8 +7,10 @@ import {NgOptimizedImage} from "@angular/common";
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import {RouterLink} from "@angular/router";
 import { EmployeeListComponent } from './component/employee-list/employee-list.component';
-import { PagingNavComponent } from './shared/paging-nav/paging-nav.component';
+import { PagingComponent } from './shared/paging/paging.component';
 import {EmployeeService} from "./service/employee.service";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import {EmployeeService} from "./service/employee.service";
     LoginComponent,
     NavbarComponent,
     EmployeeListComponent,
-    PagingNavComponent
+    PagingComponent
   ],
   imports: [
     BrowserModule,
     NgOptimizedImage,
-    RouterLink
+    RouterLink,
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
