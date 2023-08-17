@@ -4,36 +4,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './page/login/login.component';
 import {NgOptimizedImage} from "@angular/common";
-import { NavbarComponent } from './shared/navbar/navbar.component';
 import {RouterLink} from "@angular/router";
-import { EmployeeListComponent } from './component/employee-list/employee-list.component';
-import { PagingNavComponent } from './shared/paging-nav/paging-nav.component';
 import {EmployeeService} from "./service/employee.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddEmployeeComponent } from './component/add-employee/add-employee.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    NavbarComponent,
-    EmployeeListComponent,
-    PagingNavComponent,
-    AddEmployeeComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgOptimizedImage,
     RouterLink,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [EmployeeService],
-  exports: [
-    NavbarComponent,
-    EmployeeListComponent
-  ],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
