@@ -9,6 +9,9 @@ import {RouterLink} from "@angular/router";
 import { EmployeeListComponent } from './component/employee-list/employee-list.component';
 import { PagingNavComponent } from './shared/paging-nav/paging-nav.component';
 import {EmployeeService} from "./service/employee.service";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddEmployeeComponent } from './component/add-employee/add-employee.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -16,14 +19,21 @@ import {EmployeeService} from "./service/employee.service";
     LoginComponent,
     NavbarComponent,
     EmployeeListComponent,
-    PagingNavComponent
+    PagingNavComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     NgOptimizedImage,
-    RouterLink
+    RouterLink,
+    BrowserAnimationsModule
   ],
   providers: [EmployeeService],
+  exports: [
+    NavbarComponent,
+    EmployeeListComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
