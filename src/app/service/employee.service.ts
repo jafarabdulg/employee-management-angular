@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import {employeesData} from "../shared/dummy-data/employees-data";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
+  private dataUrl = '/assets/database/db.json';
 
-  private employees = employeesData;
+  constructor(private http: HttpClient) {}
 
-  getEmployees(){
-    return this.employees;
+  getAllEmployee(): Observable<any[]>{
+    return this.http.get<any[]>(this.dataUrl);
   }
 }

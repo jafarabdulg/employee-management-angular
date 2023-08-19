@@ -9,6 +9,7 @@ import {EmployeeService} from "./service/employee.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppRoutingModule} from "./app-routing.module";
 import {MatInputModule} from "@angular/material/input";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatInputModule} from "@angular/material/input";
     NgOptimizedImage,
     RouterLink,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [EmployeeService],
   exports: [],
