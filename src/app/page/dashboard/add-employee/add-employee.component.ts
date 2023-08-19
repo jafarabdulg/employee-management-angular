@@ -22,4 +22,6 @@ export class AddEmployeeComponent {
   form(property: string): FormGroup{
     return this.employeeForm.get(property) as FormGroup;
   }
+
+
 }
