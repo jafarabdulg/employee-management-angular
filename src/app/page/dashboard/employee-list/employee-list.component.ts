@@ -26,6 +26,7 @@ export class EmployeeListComponent {
   ngAfterViewInit() {
     this.service.getAllEmployee().subscribe((data) => {
       this.employees = data;
+      this.employees.push(...this.service.getUpdatedData());
       this.dataSource = new MatTableDataSource(this.employees);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
