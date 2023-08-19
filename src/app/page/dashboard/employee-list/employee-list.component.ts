@@ -46,4 +46,9 @@ export class EmployeeListComponent {
   getRowNumber(index: number): number {
     return this.dataSource.paginator!.pageIndex * this.dataSource.paginator!.pageSize + index + 1;
   }
+
+  delete(index: number): void{
+    this.employees.splice(index, 1);
+    console.log(index);
+  }
 }

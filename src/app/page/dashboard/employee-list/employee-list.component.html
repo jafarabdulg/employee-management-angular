@@ -59,7 +59,7 @@
         <td mat-cell *matCellDef="let row; let i=index">
           <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-warning">Edit</button>
-            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" (click)="delete(i)" class="btn btn-danger">Delete</button>
           </div>
         </td>
       </ng-container>
